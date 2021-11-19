@@ -1,2 +1,2 @@
 test:
-	./vendor/bin/pest
+	php ./vendor/bin/pest --colors=always
