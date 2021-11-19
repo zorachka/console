@@ -10,7 +10,7 @@ final class ConsoleConfig
     private bool $catchExceptions;
     private array $commands;
 
-    public function __construct(string $appName, bool $catchExceptions, array $commands)
+    private function __construct(string $appName, bool $catchExceptions, array $commands)
     {
         $this->appName = $appName;
         $this->catchExceptions = $catchExceptions;
@@ -50,11 +50,31 @@ final class ConsoleConfig
         return $this->catchExceptions;
     }
 
+    public function withCatchExceptions(bool $catchExceptions): self
+    {
+        $new = clone $this;
+        $new->catchExceptions = $catchExceptions;
+
+        return $new;
+    }
+
     /**
-     * @return array
+     * @return array<class-string>
      */
     public function commands(): array
     {
         return $this->commands;
+    }
+
+    /**
+     * @param class-string $command Class name
+     * @return $this
+     */
+    public function withCommand(string $command): self
+    {
+        $new = clone $this;
+        $new->commands[] = $command;
+
+        return $new;
     }
 }

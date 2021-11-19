@@ -35,6 +35,23 @@ final class ConsoleApplication implements Application
     }
 
     /**
+     * @inheritDoc
+     */
+    public function getName(): string
+    {
+        return $this->cli->getName();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getCommands(): array
+    {
+        return $this->cli->all();
+    }
+
+    /**
+     * @inheritDoc
      * @throws Exception
      */
     public function run(): void
