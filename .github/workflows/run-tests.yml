@@ -7,15 +7,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest]
         php: ['8.0', '8.1']
         dependency-version: [prefer-lowest, prefer-stable]
         parallel: ['', '--parallel']
-        exclude:
-          - php: 8.1
-            os: macos-latest
-          - php: 8.1
-            os: windows-latest
 
     name: PHP ${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependency-version }} - ${{ matrix.parallel }}
 
@@ -39,7 +34,7 @@ jobs:
         run: composer update --${{ matrix.dependency-version }} --no-interaction --no-progress
 
       - name: Unit Tests
-        run: php bin/pest --colors=always --exclude-group=integration ${{ matrix.parallel }}
+        run: ./vendor/bin/pest --colors=always --exclude-group=integration ${{ matrix.parallel }}
 
       - name: Integration Tests
-        run: php bin/pest --colors=always --group=integration
+        run: ./vendor/bin/pest --colors=always --group=integration
