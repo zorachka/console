@@ -15,7 +15,7 @@ final class ConsoleServiceProvider implements ServiceProvider
     public static function getDefinitions(): array
     {
         return [
-            Application::class => static function(ContainerInterface $container) {
+            Application::class => static function(ContainerInterface $container): Application {
                 /** @var ConsoleConfig $config */
                 $config = $container->get(ConsoleConfig::class);
                 $commands = [];
@@ -30,7 +30,7 @@ final class ConsoleServiceProvider implements ServiceProvider
                     $commands,
                 );
             },
-            ConsoleConfig::class => ConsoleConfig::withDefaults(),
+            ConsoleConfig::class => fn() => ConsoleConfig::withDefaults(),
         ];
     }
 
