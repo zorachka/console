@@ -7,9 +7,9 @@ use Zorachka\Framework\Console\ConsoleApplication;
 
 test('ConsoleApplication constructor', function () {
     $application = new ConsoleApplication(
-        'Console App',
-        false,
-        [],
+        appName: 'Console App',
+        catchExceptions: false,
+        commands: [],
     );
 
     expect($application)->toBeInstanceOf(Application::class);
