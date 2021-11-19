@@ -9,8 +9,8 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         php: ['8.0', '8.1']
-        dependency-version: [prefer-lowest, prefer-stable]
-        parallel: ['', '--parallel']
+        dependency-version: [prefer-stable]
+        parallel: ['--parallel']
 
     name: PHP ${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependency-version }} - ${{ matrix.parallel }}
 
