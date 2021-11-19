@@ -16,8 +16,10 @@
     ],
     "require": {
         "php": "^8.0",
-        "symfony/console": "^5.3",
-        "zorachka/container": "dev-main"
+        "symfony/console": "^5.3"
+    },
+    "suggest": {
+        "zorachka/container": "Required for ServiceProvider (^1.0)"
     },
     "require-dev": {
         "pestphp/pest": "^1.21",
