@@ -67,13 +67,13 @@ final class ConsoleConfig
     }
 
     /**
-     * @param class-string $command Class name
+     * @param class-string $commandClassName Class name
      * @return $this
      */
-    public function withCommand(string $command): self
+    public function withCommand(string $commandClassName): self
     {
         $new = clone $this;
-        $new->commands[] = $command;
+        $new->commands[] = $commandClassName;
 
         return $new;
     }
