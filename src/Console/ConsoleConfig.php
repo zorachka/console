@@ -21,8 +21,7 @@ final class ConsoleConfig
         string $appName = 'Console App',
         bool $catchExceptions = false,
         array $commands = []
-    )
-    {
+    ) {
         return new self($appName, $catchExceptions, $commands);
     }
 
