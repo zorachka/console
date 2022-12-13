@@ -30,7 +30,7 @@ final class ConsoleServiceProvider implements ServiceProvider
                     $commands,
                 );
             },
-            ConsoleConfig::class => fn() => ConsoleConfig::withDefaults(),
+            ConsoleConfig::class => static fn() => ConsoleConfig::withDefaults(),
         ];
     }
 
