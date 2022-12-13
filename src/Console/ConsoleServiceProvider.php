@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Zorachka\Framework\Console;
 
 use Psr\Container\ContainerInterface;
-use Zorachka\Framework\Container\ServiceProvider;
+use Zorachka\Container\ServiceProvider;
 
 final class ConsoleServiceProvider implements ServiceProvider
 {
