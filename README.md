@@ -8,10 +8,10 @@
 
 Example of Console Application using [Symfony Console Component](https://github.com/symfony/console/) at core.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/zorachka/php-package-starter.svg?style=flat-square)](https://packagist.org/packages/zorachka/php-package-starter)
-[![Tests](https://github.com/zorachka/php-package-starter/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/zorachka/php-package-starter/actions/workflows/test.yml)
-[![Analysis](https://github.com/zorachka/php-package-starter/actions/workflows/analyse.yml/badge.svg?branch=main)](https://github.com/zorachka/php-package-starter/actions/workflows/analyse.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/zorachka/php-package-starter.svg?style=flat-square)](https://packagist.org/packages/zorachka/php-package-starter)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/zorachka/console.svg?style=flat-square)](https://packagist.org/packages/zorachka/console)
+[![Tests](https://github.com/zorachka/console/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/zorachka/console/actions/workflows/test.yml)
+[![Analysis](https://github.com/zorachka/console/actions/workflows/analyse.yml/badge.svg?branch=main)](https://github.com/zorachka/console/actions/workflows/analyse.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/zorachka/console.svg?style=flat-square)](https://packagist.org/packages/zorachka/console)
 
 ## Installation
 
