@@ -8,10 +8,11 @@
 
 Example of Console Application using [Symfony Console Component](https://github.com/symfony/console/) at core.
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/zorachka/php-package-starter.svg?style=flat-square)](https://packagist.org/packages/zorachka/php-package-starter)
+[![Tests](https://github.com/zorachka/php-package-starter/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/zorachka/php-package-starter/actions/workflows/test.yml)
+[![Analysis](https://github.com/zorachka/php-package-starter/actions/workflows/analyse.yml/badge.svg?branch=main)](https://github.com/zorachka/php-package-starter/actions/workflows/analyse.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/zorachka/php-package-starter.svg?style=flat-square)](https://packagist.org/packages/zorachka/php-package-starter)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/zorachka/console.svg?style=flat-square)](https://packagist.org/packages/zorachka/console)
-[![Tests](https://github.com/zorachka/console/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/zorachka/console/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/zorachka/console.svg?style=flat-square)](https://packagist.org/packages/zorachka/console)
 ## Installation
 
 You can install the package via composer:
@@ -29,7 +30,7 @@ Create a `bin/app.php` file at root of your project with content below:
 
 declare(strict_types=1);
 
-use Zorachka\Framework\Console\Application;
+use Zorachka\Console\Application;
 
 /**
  * Self-called anonymous function that creates its own scope and keeps the global namespace clean.

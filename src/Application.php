@@ -2,19 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Zorachka\Framework\Console;
+namespace Zorachka\Console;
 
 interface Application
 {
     /**
      * Get application name.
-     * @return string
      */
     public function getName(): string;
 
     /**
      * Get all available commands.
-     * @return array
+     * @return array<object>
      */
     public function getCommands(): array;
 
