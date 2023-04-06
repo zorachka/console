@@ -10,7 +10,10 @@ use Zorachka\Console\Application;
 use Zorachka\Console\ConsoleConfig;
 use Zorachka\Console\ConsoleServiceProvider;
 
-class ConsoleServiceProviderTest extends TestCase
+/**
+ * @internal
+ */
+final class ConsoleServiceProviderTest extends TestCase
 {
     /**
      * @test

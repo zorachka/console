@@ -8,9 +8,13 @@ use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 use Zorachka\Console\Application;
 use Zorachka\Console\ConsoleApplication;
+
 use function array_keys;
 
-class ConsoleApplicationTest extends TestCase
+/**
+ * @internal
+ */
+final class ConsoleApplicationTest extends TestCase
 {
     /**
      * @test

@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace Zorachka\Console\Tests;
 
-use stdClass;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
+use stdClass;
 use Zorachka\Console\ConsoleConfig;
 
-class ConsoleConfigTest extends TestCase
+/**
+ * @internal
+ */
+final class ConsoleConfigTest extends TestCase
 {
     /**
      * @test
