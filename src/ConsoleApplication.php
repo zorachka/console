@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zorachka\Framework\Console;
+namespace Zorachka\Console;
 
 use Exception;
 use Symfony\Component\Console\Application as SymfonyConsoleApplication;
@@ -14,8 +14,6 @@ final class ConsoleApplication implements Application
 
     /**
      * ConsoleApplication constructor.
-     * @param string $appName
-     * @param bool $catchExceptions
      * @param Command[] $commands
      */
     public function __construct(
@@ -35,7 +33,7 @@ final class ConsoleApplication implements Application
     }
 
     /**
-     * @inheritDoc
+     *
      */
     public function getName(): string
     {
@@ -43,7 +41,7 @@ final class ConsoleApplication implements Application
     }
 
     /**
-     * @inheritDoc
+     * @return array<Command>
      */
     public function getCommands(): array
     {
@@ -51,7 +49,7 @@ final class ConsoleApplication implements Application
     }
 
     /**
-     * @inheritDoc
+     *
      * @throws Exception
      */
     public function run(): void

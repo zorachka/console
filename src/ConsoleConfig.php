@@ -2,14 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Zorachka\Framework\Console;
+namespace Zorachka\Console;
 
 final class ConsoleConfig
 {
     private string $appName;
     private bool $catchExceptions;
+    /**
+     * @var array<class-string>
+     */
     private array $commands;
 
+    /**
+     * @param array<class-string> $commands
+     */
     private function __construct(string $appName, bool $catchExceptions, array $commands)
     {
         $this->appName = $appName;
@@ -17,17 +23,19 @@ final class ConsoleConfig
         $this->commands = $commands;
     }
 
+    /**
+     * @param array<class-string> $commands
+     * @return ConsoleConfig
+     */
     public static function withDefaults(
         string $appName = 'Console App',
         bool $catchExceptions = false,
         array $commands = []
-    )
-    {
+    ) {
         return new self($appName, $catchExceptions, $commands);
     }
 
     /**
-     * @return string
      */
     public function appName(): string
     {
@@ -43,7 +51,6 @@ final class ConsoleConfig
     }
 
     /**
-     * @return bool
      */
     public function catchExceptions(): bool
     {
@@ -67,13 +74,13 @@ final class ConsoleConfig
     }
 
     /**
-     * @param class-string $command Class name
+     * @param class-string $commandClassName Class name
      * @return $this
      */
-    public function withCommand(string $command): self
+    public function withCommand(string $commandClassName): self
     {
         $new = clone $this;
-        $new->commands[] = $command;
+        $new->commands[] = $commandClassName;
 
         return $new;
     }

@@ -2,26 +2,29 @@
 
 declare(strict_types=1);
 
-namespace Zorachka\Framework\Console;
+namespace Zorachka\Console;
 
 use Psr\Container\ContainerInterface;
+use Symfony\Component\Console\Command\Command;
 use Zorachka\Container\ServiceProvider;
 
 final class ConsoleServiceProvider implements ServiceProvider
 {
     /**
-     * @inheritDoc
+     *
      */
     public static function getDefinitions(): array
     {
         return [
-            Application::class => static function(ContainerInterface $container): Application {
+            Application::class => static function (ContainerInterface $container): Application {
                 /** @var ConsoleConfig $config */
                 $config = $container->get(ConsoleConfig::class);
                 $commands = [];
 
                 foreach ($config->commands() as $commandClassName) {
-                    $commands[] = $container->get($commandClassName);
+                    /** @var Command $command */
+                    $command = $container->get($commandClassName);
+                    $commands[] = $command;
                 }
 
                 return new ConsoleApplication(
@@ -30,12 +33,12 @@ final class ConsoleServiceProvider implements ServiceProvider
                     $commands,
                 );
             },
-            ConsoleConfig::class => static fn() => ConsoleConfig::withDefaults(),
+            ConsoleConfig::class => static fn () => ConsoleConfig::withDefaults(),
         ];
     }
 
     /**
-     * @inheritDoc
+     *
      */
     public static function getExtensions(): array
     {
