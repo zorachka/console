@@ -32,9 +32,6 @@ final class ConsoleApplication implements Application
         }
     }
 
-    /**
-     *
-     */
     public function getName(): string
     {
         return $this->cli->getName();
@@ -49,7 +46,6 @@ final class ConsoleApplication implements Application
     }
 
     /**
-     *
      * @throws Exception
      */
     public function run(): void

@@ -10,9 +10,6 @@ use Zorachka\Container\ServiceProvider;
 
 final class ConsoleServiceProvider implements ServiceProvider
 {
-    /**
-     *
-     */
     public static function getDefinitions(): array
     {
         return [
@@ -37,9 +34,6 @@ final class ConsoleServiceProvider implements ServiceProvider
         ];
     }
 
-    /**
-     *
-     */
     public static function getExtensions(): array
     {
         return [];

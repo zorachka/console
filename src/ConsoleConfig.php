@@ -35,8 +35,6 @@ final class ConsoleConfig
         return new self($appName, $catchExceptions, $commands);
     }
 
-    /**
-     */
     public function appName(): string
     {
         return $this->appName;
@@ -50,8 +48,6 @@ final class ConsoleConfig
         return $new;
     }
 
-    /**
-     */
     public function catchExceptions(): bool
     {
         return $this->catchExceptions;
